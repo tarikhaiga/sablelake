@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sable Lake</title>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./lake-photo.jpg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #faf9f5;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      height: 800px;
+      width: 100%;
+      max-width: 1440px;
+      margin: 24px 24px 24px 72px;
+    }
+
+    .shape {
+      width: 220px;
+      height: 100%;
+      background-color: #ccc;
+      background: linear-gradient(0deg, #081339 0%, #081339 100%), url('./lake-photo.jpg'), lightgray 50% / cover no-repeat;
+      background-blend-mode: hue, normal;
+    }
+
+    .text-container {
+      max-width: 70ch;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+    }
+
+    h1 {
+      color: #081339;
+      font-family: "Libre Baskerville", serif;
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: #081339;
+      font-family: 'Epilogue', sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #081339;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: justify;
+      margin-bottom: 8px;
+    }
+
+    .subscribe-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 24px;
+    }
+
+    .subscribe-container p {
+      margin-bottom: 12px;
+    }
+
+    .subscribe-container input[type="email"] {
+      border: 1px solid #081339;
+      display: flex;
+      font-size: 20px;
+      width: 300px;
+      padding-left: 12px;
+      align-items: center;
+    }
+
+    .subscribe-container button {
+      display: flex;
+      width: 202px;
+      padding: 12px 32px;
+      justify-content: center;
+      align-items: center;
+      background: #081339;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .subscribe-form {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .custom-substack-widget {
+      border-radius: none !important;
+    }
+
+    ::selection {
+      color: #ffffff;
+      background-color: #081339;
+    }
+
+
+    @media (max-width: 768px) {
+
+      .container {
+        flex-direction: column;
+        margin: 24px;
+        margin-top: 40px;
+      }
+      .shape {
+        width: 100%;
+        height: 50px;
+      }
+      .text-container{
+        order: 2;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        flex-direction: column;
+        margin: 16px;
+        margin-top: 40px;
+      }
+      .shape {
+        width: 100%;
+        height: 50px;
+
+      }
+      .text-container{
+        order: 2;
+      }
+      h1 {
+        font-size: 48px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-container">
+      <h1>Sable Lake</h1>
+      <h2>Enhanced offline reality</h2>
+      <p>
+        This is a project that aims to improve help people enhance their offline life and spend less time on their digital devices. We recognize the benefits of digital technology and its capabilities, that is why we are not seeking an alternative but a complement.
+        <br>
+        Everyone should be information conscious and maintain a healthy information diet. As a result, we are designing "offline products", writing articles, discussing research and compiling a repository of information on how to enhance your offline life.
+      </p>
+      <div class="subscribe-container">
+        <p>Tips, research, videos and more sent weekly in our newsletter:</p>
+        <form class="subscribe-form">
+          <!-- <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button> -->
+          <!-- <iframe src="https://sablelake.substack.com/embed" width="480" height="200" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
+          <div id="custom-substack-embed"></div>
+        </form>
+      </div>
+    </div>
+    <div class="shape"></div>
+  </div>
+  <script>
+    window.CustomSubstackWidget = {
+      substackUrl: "sablelake.substack.com",
+      placeholder: "Type your email...",
+      buttonText: "Subscribe",
+      theme: "custom",
+      colors: {
+        primary: "#081339",
+        input: "#ffffff",
+        email: "#081339",
+        text: "#ffffff",
+      }
+    };
+  </script>
+  <script src="https://substackapi.com/widget.js" async></script>
+  <script>
+    window.onload = function() {
+      const element = document.querySelector('.custom-substack-widget');
+      element.style.borderRadius = '0px';
+    };
+
+  </script>
+</body>
+</html>
