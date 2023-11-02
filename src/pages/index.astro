@@ -1,0 +1,49 @@
+---
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+import Hero from "../components/Hero.astro"
+import CardWrapper from "../components/CardWrapper.astro";
+import Card from "../components/Card.astro";
+import SmallCard from "../components/SmallCard.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sable Lake</title>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./lake-photo.jpg">
+</head>
+<body>
+  <Navbar />
+  <Hero />
+  <CardWrapper title="Articles">
+    <Card />
+    <Card />
+    <Card />
+  </CardWrapper>
+  <CardWrapper title="Book Reviews">
+    <Card />
+    <Card />
+    <Card />
+  </CardWrapper>
+  <CardWrapper title="Activities">
+    <SmallCard />
+    <SmallCard />
+    <SmallCard />
+    <SmallCard />
+    <SmallCard />
+  </CardWrapper>
+  <CardWrapper title="Communities & Movements">
+    <SmallCard />
+    <SmallCard />
+    <SmallCard />
+    <SmallCard />
+    <SmallCard />
+  </CardWrapper>
+  <Footer />
+</body>
+<script is:inline src="./node_modules/preline/dist/preline.js"></script>
+</html>
