@@ -5,6 +5,8 @@ import Hero from "../components/Hero.astro"
 import CardWrapper from "../components/CardWrapper.astro";
 import Card from "../components/Card.astro";
 import SmallCard from "../components/SmallCard.astro";
+import ProductCard from "../components/ProductCard.astro";
+import Social from "../components/Social.astro";
 ---
 
 <!DOCTYPE html>
@@ -43,6 +45,12 @@ import SmallCard from "../components/SmallCard.astro";
     <SmallCard />
     <SmallCard />
   </CardWrapper>
+  <CardWrapper title="Offline Merchandise">
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+  </CardWrapper>
+  <Social />
   <Footer />
 </body>
 <script is:inline src="./node_modules/preline/dist/preline.js"></script>
