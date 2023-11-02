@@ -1,14 +1,18 @@
+---
+const {title, description, imageSrc}= Astro.props
+---
+
 <a class="group rounded-xl overflow-hidden" href="#">
   <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
-    <img class="w-full h-full absolute top-0 left-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl" src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
+    <img class="w-full h-full absolute top-0 left-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl" src={imageSrc} alt="Image Description">
   </div>
 
   <div class="mt-7">
     <h3 class="text-xl font-semibold">
-      Onsite
+      {title}
     </h3>
     <p class="mt-3">
-      Optimize your in-person experience with best-in-class capabilities like badge printing and lead retrieval
+      {description}
     </p>
     <p class="mt-5 inline-flex items-center gap-x-1.5 text-blue-600 decoration-2 group-hover:underline font-medium">
       Read more
