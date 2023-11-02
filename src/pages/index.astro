@@ -50,8 +50,12 @@ import Social from "../components/Social.astro";
     <ProductCard />
     <ProductCard />
   </CardWrapper>
-  <Social />
+  <CardWrapper title="Social & Visuals" hideViewAll={true}>
+    <Social />
+    <Social />
+    <Social />
+  </CardWrapper>
   <Footer />
 </body>
-<script is:inline src="./node_modules/preline/dist/preline.js"></script>
+<script is:inline src="/node_modules/preline/dist/preline.js"></script>
 </html>
