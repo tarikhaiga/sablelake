@@ -1,4 +1,19 @@
-<!-- Blog Article -->
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article</title>
+</head>
+<body>
+  <Navbar />
+  <!-- Blog Article -->
 <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
   <div class="max-w-2xl">
     <!-- Avatar Media -->
@@ -14,12 +29,12 @@
               <!-- Tooltip -->
               <div class="hs-tooltip inline-block [--trigger:hover] [--placement:bottom]">
                 <div class="hs-tooltip-toggle sm:mb-1 block text-left cursor-pointer">
-                  <span class="font-semibold">
+                  <span class="font-semibold text-gray-800">
                     Leyla Ludic
                   </span>
 
                   <!-- Dropdown Card -->
-                  <div class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 max-w-xs cursor-default bg-gray-900 divide-y divide-gray-700 shadow-lg rounded-xl dark:bg-black" role="tooltip">
+                  <div class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 max-w-xs cursor-default bg-gray-900 divide-y divide-gray-700 shadow-lg rounded-xl" role="tooltip">
                     <!-- Body -->
                     <div class="p-4 sm:p-5">
                       <div class="mb-2 flex w-full sm:items-center gap-x-5 sm:gap-x-3">
@@ -73,7 +88,7 @@
                 <li class="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full">
                   Jan 18
                 </li>
-                <li class="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full ">
+                <li class="inline-block relative pr-6 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-2 before:-translate-y-1/2 before:w-1 before:h-1 before:bg-gray-300 before:rounded-full">
                   8 min read
                 </li>
               </ul>
@@ -167,7 +182,7 @@
 
 <!-- Sticky Share Group -->
 <div class="sticky bottom-6 inset-x-0 text-center">
-  <div class="inline-block bg-white shadow-md rounded-full py-3 px-4 dark:bg-gray-800">
+  <div class="inline-block bg-white shadow-md rounded-full py-3 px-4">
     <div class="flex items-center gap-x-1.5">
       <!-- Button -->
       <div class="hs-tooltip inline-block">
@@ -183,7 +198,7 @@
       </div>
       <!-- Button -->
 
-      <div class="block h-3 border-r border-gray-300 mx-3 dark:border-gray-600"></div>
+      <div class="block h-3 border-r border-gray-300 mx-3"></div>
 
       <!-- Button -->
       <div class="hs-tooltip inline-block">
@@ -199,7 +214,7 @@
       </div>
       <!-- Button -->
 
-      <div class="block h-3 border-r border-gray-300 mx-3 dark:border-gray-600"></div>
+      <div class="block h-3 border-r border-gray-300 mx-3"></div>
 
       <!-- Button -->
       <div class="hs-dropdown relative inline-flex">
@@ -244,3 +259,6 @@
   </div>
 </div>
 <!-- End Sticky Share Group -->
+<Footer />
+</body>
+</html>
