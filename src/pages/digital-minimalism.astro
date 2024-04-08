@@ -1,0 +1,35 @@
+---
+// Import the Article component
+import Article from '../components/article.astro';
+
+// Define the props for the Article component
+const articleData = {
+  title: "Digital Minimalism: Choosing a Focused Life in a Noisy World, Cal Newport (2019)",
+  imageUrl: "../public/ai-work.webp",
+  imageAlt: "An abstract representation of various types of noise",
+  content: `
+    <p>The core of Newport's philosophy, Digital Minimalism, is succinctly defined as:</p>
+    <p class="mb-5"><i>"A philosophy of technology use in which you focus your online time on a small number of carefully selected and optimized activities that strongly support things you value, and then happily miss out on everything else.”</i></p>
+    <p class="mb-5">In these words, Newport encapsulates a deliberate and mindful approach to navigating the digital landscape. Digital minimalism, as he defines it, advocates for a purposeful selection of online activities that align with one's values, optimizing the use of technology to enhance specific aspects of life. The intentional omission of activities that don't strongly contribute to one's values is a key tenet of this philosophy.</p>
+    <p>Imagine you need to look up the word “<strong>Fabiform</strong>” in the dictionary (don’t search; it means “shaped like a bean”):</p>
+    <p class="mb-5">If you choose to use a physical dictionary, the extra information you will receive will be other words like “faber”, “fabel” that you flipped through while you are looking for “fabiform”. If you choose to use an online dictionary, apart from seeing the definition and synonyms of the word – just like a traditional paperback dictionary does, you will also see ads on the side banner blurting out irrelevant things like “shop 50% off” or “get now”.</p>
+    <p class="mb-5">The ads and banners you see are noise. Even though you might feel lucky to save some pennies by clicking on the ad and diverting from dictionary to online shopping – it was not your intent. Looking up the word was the original intention, not shopping. It is the same as opening up social media, checking on your social circle was the plan, not clicking on random videos or celebrity news.</p>
+    <p class="mb-5">I am not saying similar noise does not exist in the physical world. It does, but it is less forceful and personal compared to digital noise. The impact of physical ads is low, with various distractions occurring simultaneously. You might see an ad on a utility pole, but the next second, as you pass by it, you're distracted by a shiny green motorcycle, and soon enough, the ad is permanently deleted from your memory.</p>
+    <p class="mb-5">The moment you step outside, you encounter posters on neighborhood poles, flyers in your mailbox, car honks, and passersby's T-shirts with slogans. In bookstores, snacks and plants are sold at the counter; coffee shops advertise decor. Buses with giant ads on the windows pass by; a cyclist blares loud music. However, these noises aren't targeted specifically at you, not directly in your face, and not immediately actionable (you likely can't "learn more" or "buy now" on the spot and will probably forget about them a few steps later). They exist in your periphery, are spontaneous, and can be easily dismissed when you return to your personal space, assuming you're not heading home to dive back into the digital world.</p>
+    <p class="mb-5">Between information and its receivers, noise is inevitable and subjective; what constitutes noise depends on the receiver's judgment. Digital noise permeates silently; it doesn't assault our eardrums or cause physical discomfort, making it more insidious and difficult to detect. Our only defense against digital noise is our mind, which has an obscure threshold for noise tolerance. Our ears recognize a siren's blare, our nose recoils from a foul smell, our eyes squint against bright light, and our tongue rejects the unsavory; yet, our mind is perpetually bombarded with information, even in sleep.</p>
+    <p class="mb-5">How to train our mind to sense noise? That's what we at Sable Lake try to address. But for now, let's keep it short: reducing our exposure to information can recalibrate our mind’s threshold. Just as with the sensitivities of our nose, ears, eyes, and taste buds, our mind needs a break from the constant barrage of stimuli to regain noise awareness, to redefine what is quiet and what is loud. The mind needs its time to clear out its space, where the essential information one intends on receiving needs to come from a very clear source, one where noise is minimal, detectable and avoidable.</p>
+  `
+};
+
+// Use the Article component and pass the defined props
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{articleData.title}</title>
+</head>
+<body>
+  <Article {...articleData} />
+</body>
+</html>

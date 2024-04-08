@@ -1,0 +1,46 @@
+---
+// Import the Article component
+import Article from '../components/article.astro';
+
+// Define the props for the Article component
+const articleData = {
+  title: "Discussing some personal habits and decisions that help in going offline",
+  subtitle: "Noise as undesired information and its impact on cognitive behavior.",
+  content: `
+    <p>Productivity software meant more time spent looking at the screen and therefore more likely to be distracted.</p>
+    <p class="mb-5">It took me a while to reach the conclusion above. It reminds me of the “PKM Bell Curve” meme circulating online:</p>
+  imageUrl: "../public/ai-work.webp",
+  imageAlt: "An abstract representation of various types of noise",
+  content:
+    <p class="mb-5">You start with Notes, move to try all the apps out there and end up with Notes.</p>
+    <p class="mb-5">As someone who works in the tech industry, I had used and tried many software tools that I thought it helped me get more productive. But most of this led to is increased distraction, procrastination and time spent online. As a result, I decided to take some things offline and try to disconnect from as many unnecessary online and digital activities as possible. As I experimented more, <b> I realized it is not just my productivity that suffered, it was my entire wellbeing.</b></p>
+    <p class="mb-5">I will expand on the previous sentence in another article. It is pretty important, but I wanted to get out of the trap I got myself into first and worry about the philosophy afterwards.</p>
+    <p class="mb-5">To kick things off, I thought the activity that deserved this transition the most was reading, which included both books and online articles. Related but slightly different is studying. Before, I conducted most of my studying on the computer, but this time I decided that I want to either study completely without a computer or combine that with some pen and paper.</p>
+    <p class="mb-5">Things of course did not and still do not move linearly. Some days I ditched my plans to remain offline while other days I included more activities or started habits that helped me stay offline.</p>
+    <p class="mb-5">Below I list some of those things I did to help me stay offline with some accompanying thoughts:</p>
+    <ol class="mb-5">
+        <li><b>Reading (paper) books</b><br> Reading a book while holding it in my hands or placing it on a desk has always been superior to reading something on a screen. I knew that for myself, but what I kept questioning is information management and note-taking. Of course it is easier to store, organization and retrieve information on a computer. The issue, however, is that the amount of information I could be exposed to and be distracted by on a computer screen is infinite. I can easily click on the wrong tab and suddenly I am sucked into doing something else. There is also the constraints of physical space. Holding a book forces one to engage with it, making it a bit harder to engage with something else at the same time and not be aware of being distracted. The book occupies a space that only it can occupy at the same time, but this doesn’t happen on a computer screen.</li>
+        <li><b>Printing things I want to read online</b><br>Whether it is a Wikipedia article or a Twitter thread, I usually try to print any long and interesting material online to digest it better offline. I bought a cheap printer mainly for this, and I find it quite useful as I can take some of those pages I printed with me to read in bed, in the bathroom and in the kitchen. As portable as a phone!</li>
+        <li><b>Books lying around the apartment</b><br>Initially, I was a little bit hesitant about buying books especially because they can be heavy to carry while traveling or moving places. I now know that buying many books and placing them in different places not only helps me read more, but also remind me of my priorities. To illustrate this point, let’s take news as an example. There are so many events and topics described and they almost never allow for a deep understanding of what is going on. That’s because that is not the purpose of news. It is just a way for people to be aware of things, not to study them. By looking at the books around me, I can see what topics I’m mostly interested in, and I can easily pick up and read 5–10 pages which will probably be enough to gain more information and a better understanding about a topic than listening to news the whole day. The same applies to distractions like social media, emails, and topics being discussed among a group of people.</li>
+        <li><b>Delete social media apps</b><br>I don’t use social media frequently, but when I have that urge to check Twitter I do so by logging in via my mobile browser. Fortunately, the user experience of social media in the browser is significantly worse than in mobile apps or desktop browsers: loading content and navigating pages is slow, some features do not work properly or do not exist at all. All of this makes it much easier to quit.</li>
+        <li><b>No phone or computer in bedroom</b>No browsing late at night or early morning. Bed is primarily to rest.</li>
+        <li><b>No TV subscriptions</b>I don’t frequently watch TV so this comes easy to me, but whenever I want to watch a specific show or a movie, I usually opt for, you know, cheaper options ;) I also think it would be helpful sometimes to think of browsing Netflix as if one is browsing TikTok or other social media feeds.</li>
+        <li><b>Phone is always on silent and do-not-distrub</b><br>I think the last time this was not the case for me was 10 years ago. Thanks to the different focus modes on phones, one can customize their settings to select contacts they want to hear from.</li>
+        <li><b>Physical activity</b><br>For me, that includes working out, playing team sports and walking. Team sports are not only a great way to connect with people, but also exercise in ways the body will not probably experience in individual workouts. Also, I use my watch to track how far I walk everyday and this encourages me to walk more and be aware of the sedentary lifestyle I am trying to change.</li>
+    </ol>
+    <p class="mb-5">There are more things I try doing which I will get to in future articles, but these are the most important ones I have been doing recently.</p>
+  `
+};
+
+// Use the Article component and pass the defined props
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{articleData.title}</title>
+</head>
+<body>
+  <Article {...articleData} />
+</body>
+</html>
