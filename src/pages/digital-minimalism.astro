@@ -5,20 +5,93 @@ import Article from '../components/article.astro';
 // Define the props for the Article component
 const articleData = {
   title: "Digital Minimalism: Choosing a Focused Life in a Noisy World, Cal Newport (2019)",
-  imageUrl: "../public/ai-work.webp",
-  imageAlt: "An abstract representation of various types of noise",
+  imageUrl: "/digital-minimalism-cover.png",
+  imageAlt: "",
   content: `
-    <p>The core of Newport's philosophy, Digital Minimalism, is succinctly defined as:</p>
-    <p class="mb-5"><i>"A philosophy of technology use in which you focus your online time on a small number of carefully selected and optimized activities that strongly support things you value, and then happily miss out on everything else.”</i></p>
+    <p class="mb-5 mt-5">The core of Newport's philosophy, Digital Minimalism, is succinctly defined as:</p>
+    <p class="mb-5 ml-5"><i>A philosophy of technology use in which you focus your online time on a small number of carefully selected and optimized activities that strongly support things you value, and then happily miss out on everything else.</i></p>
     <p class="mb-5">In these words, Newport encapsulates a deliberate and mindful approach to navigating the digital landscape. Digital minimalism, as he defines it, advocates for a purposeful selection of online activities that align with one's values, optimizing the use of technology to enhance specific aspects of life. The intentional omission of activities that don't strongly contribute to one's values is a key tenet of this philosophy.</p>
-    <p>Imagine you need to look up the word “<strong>Fabiform</strong>” in the dictionary (don’t search; it means “shaped like a bean”):</p>
-    <p class="mb-5">If you choose to use a physical dictionary, the extra information you will receive will be other words like “faber”, “fabel” that you flipped through while you are looking for “fabiform”. If you choose to use an online dictionary, apart from seeing the definition and synonyms of the word – just like a traditional paperback dictionary does, you will also see ads on the side banner blurting out irrelevant things like “shop 50% off” or “get now”.</p>
-    <p class="mb-5">The ads and banners you see are noise. Even though you might feel lucky to save some pennies by clicking on the ad and diverting from dictionary to online shopping – it was not your intent. Looking up the word was the original intention, not shopping. It is the same as opening up social media, checking on your social circle was the plan, not clicking on random videos or celebrity news.</p>
-    <p class="mb-5">I am not saying similar noise does not exist in the physical world. It does, but it is less forceful and personal compared to digital noise. The impact of physical ads is low, with various distractions occurring simultaneously. You might see an ad on a utility pole, but the next second, as you pass by it, you're distracted by a shiny green motorcycle, and soon enough, the ad is permanently deleted from your memory.</p>
-    <p class="mb-5">The moment you step outside, you encounter posters on neighborhood poles, flyers in your mailbox, car honks, and passersby's T-shirts with slogans. In bookstores, snacks and plants are sold at the counter; coffee shops advertise decor. Buses with giant ads on the windows pass by; a cyclist blares loud music. However, these noises aren't targeted specifically at you, not directly in your face, and not immediately actionable (you likely can't "learn more" or "buy now" on the spot and will probably forget about them a few steps later). They exist in your periphery, are spontaneous, and can be easily dismissed when you return to your personal space, assuming you're not heading home to dive back into the digital world.</p>
-    <p class="mb-5">Between information and its receivers, noise is inevitable and subjective; what constitutes noise depends on the receiver's judgment. Digital noise permeates silently; it doesn't assault our eardrums or cause physical discomfort, making it more insidious and difficult to detect. Our only defense against digital noise is our mind, which has an obscure threshold for noise tolerance. Our ears recognize a siren's blare, our nose recoils from a foul smell, our eyes squint against bright light, and our tongue rejects the unsavory; yet, our mind is perpetually bombarded with information, even in sleep.</p>
-    <p class="mb-5">How to train our mind to sense noise? That's what we at Sable Lake try to address. But for now, let's keep it short: reducing our exposure to information can recalibrate our mind’s threshold. Just as with the sensitivities of our nose, ears, eyes, and taste buds, our mind needs a break from the constant barrage of stimuli to regain noise awareness, to redefine what is quiet and what is loud. The mind needs its time to clear out its space, where the essential information one intends on receiving needs to come from a very clear source, one where noise is minimal, detectable and avoidable.</p>
-  `
+    <p> As an example, consider smartphones. They undoubtedly make texting easier, yet Newport suggests that this convenience should not dominate the way we connect with people. Similarly, the ability to call individuals in faraway places, once an impossibility, should not entirely replace the way we used to live before these technological advancements. </p>
+    <p class="mb-5">There are, of course, numerous details and nuances that individuals must assess based on their context. Carl Newport recognizes this and organizes his book around this understanding.</p>
+    <p class="mb-5">The book is divided into 2 parts: Foundations and Practices. In the first part, the author discusses a lot of the theory behind his work and ends with a program to help the reader declutter their digital life – a “digital detox”. The second part of the book deals with more practical ideas on how to maintain a digitally minimalist lifestyle, backing this up with evidence from research, philosophy and other works.</p>
+    <p class="mb-5"><b>Contents table:</b></p>
+    <p class="mb-4"> – PART 1: Foundations</p>
+    <ol class="mb-5">
+      <li>1. A Lopsided Arms Race</li>
+      <li>2. Digital Minimalism</li>
+      <li>3. The Digital Declutter</li>
+    </ol>
+    <p class="mb-4"> – PART 2: Practices</p>
+    <ol class="mb-8">
+      <li>1. Spend Time Alone</li>
+      <li>2. Don't Click "Like"</li>
+      <li>3. Reclaim Leisure</li>
+      <li>4. Join the Attention Resistance</li>
+    </ol>
+
+    <h3 class="text-2xl font-bold mb-2">Part 1</h3>
+    <p class="mb-5">In the first chapter, <i>A Lopsided Arms Race</i>, Newport argues that the new -digital- technologies we use nowadays are crafted to foster addiction. These tools result from extensive research and a deep understanding of human behavior by their creators, aiming to acquire and retain users effectively.
+    Newport goes on to claim that people have a feeling of unease or discomfort with new digital technologies (just think about the general discussion around artificial intelligence). Newport continues to say:</p>
+    <p class="mb-5 ml-5"><i>What’s making us uncomfortable, in other words, is this feeling of losing control—a feeling that instantiates itself in a dozen different ways each day, such as when we tune out with our phone during our child’s bath time, or lose our ability to enjoy a nice moment without a frantic urge to document it for a virtual audience.
+    It’s not about usefulness, it’s about autonomy.</i></p>
+    <p class="mb-5">This is an important observation because throughout the book, the author references few people who practice and encourage self-reliance, self-improvement and intentional living–such as Thoreau, Kevin Kelly, and Matthew Crawford. These attributes, according to Newport, are worth cultivating. </p>
+    <p class="mb-5">Newport's method of cultivating these attributes is encapsulated in his second chapter, titled Digital Minimalism. Within this chapter, he defines digital minimalism (see definition above) and provides additional ways of thinking about it philosophically and practically. For example, Newport encourages readers to define their own philosophy of technology use and their values and then ask:
+    </p>
+    <p class="mb-5 ml-5"><i>“Is this the best way to use technology to support this value? If the answer is no, the minimalist will set to work trying to optimize the tech, or search out a better option.”</i></p>
+    <p class="mb-5">He then goes on to capture an important point that I think is the default behavior of many: </p>
+    <p class="mb-5 ml-5"><i>Notice, this minimalist philosophy contrasts starkly with the maximalist philosophy that most people deploy by default—a mind-set in which any potential for benefit is enough to start using a technology that catches your attention. A maximalist is very uncomfortable with the idea that anyone might miss out on something that’s the least bit interesting or valuable.</i> </p>
+    <p class="mb-5">The subsequent part of the chapter delves into the three fundamental principles of digital minimalism, substantiating their validity. These principles are:</p>
+    <p class="mb-5 ml-5"><b>Principle #1: Clutter is costly.</b> <br/> Digital minimalists recognize that cluttering their time and attention with too many devices, apps, and services creates an overall negative cost that can swamp the small benefits that each individual item provides in isolation. </p>
+    <p class="mb-5">To back up this principle, Newport uses Thoreau’s writings in Walden as an example of how Thoreau emphasized on trade-offs and intentionality that give us more time and allows us to live more. Thoreau believed in calculating the true cost of an item or activity in terms of the time it consumes from one's life. Similarly, Newport suggests that individuals should assess the real value of their digital activities and tools, considering the time and attention they consume. </p>
+    <p class="mb-5 ml-5"><b>Principle #2: Optimization is important.</b> <br/> Digital minimalists believe that deciding a particular technology supports something they value is only the first step. To truly extract its full potential benefit, it’s necessary to think carefully about how they’ll use the technology. </p>
+    <p class="mb-5">Newport uses the return curve or the law of diminishing return to illustrate how one can get significant benefits from using a certain technology initially, but later find out that those benefits are getting less significant as the user continues to use the technology, which leads to negatives outweighing positives.
+    As a result, the author suggests that people should pay attention to the point where the costs of using a technology become equal to the benefits, as this is the point where using that particular technology becomes unjustified. More generally, prioritizing a few digital tools that yield the greatest benefits and avoiding other tools that contribute to clutter is how one should optimize their technology use. </p>
+    <p class="mb-5 ml-5"><b>Principle #3: Intentionality is satisfying.</b> <br/> Digital minimalists derive significant satisfaction from their general commitment to being more intentional about how they engage with new technologies. This source of satisfaction is independent of the specific decisions they make and is one of the biggest reasons that minimalism tends to be immensely meaningful to its practitioners. </p>
+    <p class="mb-5">Cal Newport uses the Amish as an example to illustrate the intentional and mindful approach they take towards technology. Newport highlights the Amish practice of carefully evaluating each technology before deciding whether to adopt it into their community. The Amish are known for being selective about the technologies they embrace, considering the impact on their way of life, community, and values. Newport says: </p>
+    <p class="mb-5 ml-5"><i>When a new technology rolls around, there’s typically an “alpha geek” (to use Kelly’s term) in any given Amish community that will ask the parish bishop permission to try it out. Usually the bishop will agree. The whole community will then observe this first adopter “intently,” trying to discern the ultimate impact of the technology on the things the community values most. If this impact is deemed more negative than helpful, the technology is prohibited. Otherwise it’s allowed, but usually with caveats on its use that optimize its positives and minimize its negatives.
+    The reason most Amish are prohibited from owning cars, for example, but are allowed to drive in motor vehicles driven by other people, has to do with the impact of owning an automobile on the social fabric of the community. 
+    When cars first appeared at the turn of the last century, the Amish noticed that drivers would leave the community to go picnicking or sightseeing in other towns, instead of visiting family or the sick on Sundays, or patronizing local shops on Saturday.</i></p>
+    <p class="mb-8"> After the discussion of these principles, Newport concludes the first part of his book with a process where individuals take a break from optional digital technologies for a specified period, such as 30 days. During this time, they step back from non-essential apps, social media platforms, and other digital tools to assess their actual impact on their lives. Following this break, individuals can then carefully reintroduce technologies and tools that they believe is crucial to their life and aligns with their values. </p>
+    <h3 class="text-2xl font-bold mb-2">Part 2</h3>
+    <p class="mb-5">The second part of the book, titled "Practices," begins with a chapter dedicated to solitude, emphasizing the importance of spending time alone to cultivate a more intentional and meaningful life in the digital age: </p>
+    <p class="mb-5 ml-5"><i>Solitude is about what’s happening in your brain, not the environment around you. Accordingly, they define it to be a subjective state in which your mind is free from input from other minds.</i> </p>
+    <p class="mb-5">Newport suggests that solitude is crucial for deep thinking, self-reflection, and the development of one's sense of self. According to him, spending time alone allows individuals to discover their true passions, think critically about their values, and engage in activities that bring genuine fulfillment. He encourages readers to intentionally carve out moments of solitude, free from the constant stimulation of digital devices, to foster creativity, focus, and a deeper understanding of oneself. He proposes different practices to attain some moments of solitude including leaving phone at home, taking long walks and writing letters to one’s self (diaries or journaling).  </p>
+    <p class="mb-5">The 5th chapter of the book, Don’t Click “Like”, delves into the pitfalls of mindlessly engaging with the social media feature of clicking "Like" on posts. Newport argues that the act of clicking "Like" is often a passive and superficial form of social interaction, providing only a fleeting sense of connection without any meaningful engagement. </p>
+    <p class="mb-5">In addition, a number of research experiments are discussed to illustrate how the brain evolved to focus on social thinking: </p>
+    <p class="mb-5 ml-5"><i>Our brains adapted to automatically practice social thinking during any moments of cognitive downtime, and it’s this practice that helps us become really interested in our social world.</i> </p>
+    <p class="mb-5">As a result, Cal Newport advocates for conversation-centric communication as a more meaningful and fulfilling alternative to the often shallow interactions facilitated by digital tools. He suggests that relying on face-to-face conversations and direct communication fosters deeper connections and a more genuine sense of community. Practices that the author recommends are:</p>
+    <ol class="mb-5 ml-5"> 
+      <li class="mb-2"> 1. Don’t click like on social media as it could be a way to train the mind that likes are an alternative to in rich conversations.</li>
+      <li class="mb-2"> 2. Consolidate texting activity into a specific time of the day and treat messages as emails. Using Do Not Disturb mode is also encouraged to avoid unnecessary distraction. </li>
+      <li class="mb-2"> 3. Holding office hours conversations similar to what professors at universities do, where there is an open time slot of anyone to “drop in” and chat.</li>
+    </ol>
+    <p class="mb-5">The penultimate chapter in part 2, Reclaim Leisure, emphasizes the importance of reclaiming leisure time from the often mindless and passive consumption of digital content. Instead, Newport agrees to what Aristotle argued, which is that high-quality leisure is an integral part of a life well-lived. He outlines 3 “Leisure Lessons” accompanied with examples: </p>
+    <ol class="mb-5 ml-5"> 
+      <li class="mb-2">Lesson #1: “Prioritize demanding activity over passive consumption.”</li>
+      <li class="mb-2">Lesson #2: “Use skills to produce valuable things in the physical world.” </li>
+      <li class="mb-2">Lesson #3: “Seek activities that require real-world, structured social interactions.”</li>
+    </ol>
+    <p class="mb-5">Other practices the author recommends in this chapter include:</p>
+    <ol class="mb-5 ml-5"> 
+      <li class="mb-2">1. Fix or build something every week.</li>
+      <li class="mb-2">2. Schedule low quality leisure (e.g. checking social media or watching TV). </li>
+      <li class="mb-2">3. Join an organization, club, activity or meeting to engage in social interaction.</li>
+    </ol>
+    <p class="mb-5">In the concluding pages of the book, the author encourages readers to "Join the Attention Resistance" as part of his broader message advocating for a mindful and intentional approach to technology use. The idea behind joining the Attention Resistance is actively resisting the constant pull of digital distractions and take back control over one's attention. Cal Newports provides multiple practices to resist against such distractions:</p>
+    <ol class="mb-5 ml-5"> 
+      <li class="mb-2"><b> 1. Delete Social Media from Your Phone</b><br/>This should help readers avoid having instant access to social media and the easy distraction it causes. </li>
+      <li class="mb-2"><b> 2. Turn Your Devices Into Single-Purpose Computers </b><br/>While computers today are designed to be general-purpose and able to run apps for work and leisure, Newport advocates blocking unnecessary websites and apps by default and only allowing them when needed or during specific times. </li>
+      <li class="mb-2"><b> 3. Use Social Media Like a Professional </b><br/>People can use social media for specific purposes like work or learning about a new topic. </li>
+      <li class="mb-2"><b> 4. Embrace Slow Media </b><br/>Print newspapers and magazines as an alternative way to consume news and information. </li>
+      <li class="mb-2"><b> 5. Dumb Down Your Smartphone </b><br/> Instead of using smartphones, use “dumb phones” that cannot run different distracting apps. </li>
+
+    </ol>
+    
+    <p class="mb-5"> </p>
+    <p class="mb-5"> </p>
+
+
+    `
 };
 
 // Use the Article component and pass the defined props

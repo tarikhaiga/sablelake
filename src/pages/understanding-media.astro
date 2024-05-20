@@ -1,0 +1,47 @@
+---
+// Import the Article component
+import Article from '../components/article.astro';
+
+// Define the props for the Article component
+const articleData = {
+  title: "Understanding Media: The Extensions of Man, Marshall McLuhan (1964)",
+  imageUrl: "/understanding-media-cover.png",
+  imageAlt: "Understanding Media book cover",
+  content: `
+    <p class="mb-5 mt-5"><i>Understanding Media: The Extensions of Man</i> is a seminal exploration of how media or technologies fundamentally reshape human social life and perception. Marshall McLuhan, a communication theorist and media scholar, argues that media itself, rather than its content, shapes our environments, habits, and even thought processes. He famously asserts, "the medium is the message," highlighting the intrinsic value of studying the medium's impact over its content. For instance, television alters social interactions not through its programs but by reconfiguring the viewer's engagement with the world—favoring passive consumption over socializing with people.</p>
+    
+    <p class="mb-5">McLuhan divides his exploration into two main parts: the first examines media's history and its societal impacts, and the second part delves into the effects of specific media types. In part one, he posits that media acts as an extension and an amputation of human faculties, thereby changing human behavior.</p>
+
+    <p class="mb-5">To illustrate how such behavioral changes occur, McLuhan introduces the concept of hot and cool media to further explore the influence of different media types. Hot media, such as film and lectures, are defined by their high resolution or definition, demanding little interaction from the user because they extend a single sense in "high definition." Cool media, like telephone and seminars, are lower in resolution and require more active participation from the audience to fill in gaps in perception, thus extending several senses in "low definition." This distinction underscores McLuhan's thesis that the nature of the medium itself—its "temperature" or degree of sensory engagement—shapes human experience and social structures, rather than the specific content it conveys.</p>
+    
+    <p class="mb-5">Additionally, McLuhan likens the study of media to a form of art, suggesting it acts as a radar system for the human race, anticipating future social and technological change and training people’s perception and judgment. He explains that when a new medium or technology creates a new environment, it is simultaneously contrasted by an anti-environment, which is highlighted through art or the study of media. One illustrative example McLuhan provides is the introduction of mechanical technology into society, which created a new environment characterized by agrarian life and nature—the old environment. This shift led people to reevaluate their views on nature, transforming it from something feared to something cherished. McLuhan posits that technology enabled humans to control and appreciate nature in ways previously unimagined.</p>
+    
+    <p class="mb-5">Building on these ideas, McLuhan broadens his analysis to describe how media influences human faculties. A significant portion of McLuhan’s work is dedicated to illustrating how electricity and electronic media extend the human nervous system, broadening our sensory experiences, and changing our interaction with the world. In part two, he gives additional examples of other media and what they extend such as clothing extending our skin, the wheel our feet, and language our thought, illustrating how media becomes a natural extension of human capability. However, this extension often comes with the cost of numbing other senses or capabilities.</p>
+    
+    <h3 class="text-2xl font-bold mb-2">Practice</h3>
+    <p class="mb-5">The main takeaways from <i>Understanding Media</i> are the metaphors and the conceptual frameworks that one can adopt to analyze their use of different media. Below are the main frameworks presented and how they are relevant today:</p>
+    
+    <h3 class="text-xl font-bold mb-2">1. The medium is the message</h3>
+    <p class="mb-5">Marshall McLuhan's iconic phrase, "the medium is the message," illustrates how the nature of a medium shapes and controls the scale and form of human behavior and relationships. By examining smartphones, a pervasive medium, we can see this concept in action. It is undeniable that the ubiquitous use of smartphones has dramatically altered human behavior. This medium creates the space for its content, or the message, to proliferate in every direction. The message in this case encompasses a wide array of activities: from social media engagement and gaming to online shopping and photography. Smartphones stand out for their portability, ensuring our access to digital spaces is uninterrupted, which has spurred the growth of new industries (e.g. gig economy) and reshaped our daily lives. The essence of smartphones as a medium extends far beyond the individual activities they enable, influencing societal structures, interpersonal relationships, and even our cognitive processes.</p>
+    
+    <h3 class="text-xl font-bold mb-2">2. Media as extension and amputation of humans</h3>
+    <p class="mb-5">Take the car as an example. It extends our feet and ability to travel, making it easier to travel at speeds and crossing distances that are impossible on foot. This ability has again reshaped how and where we live, landscapes, economies, friendships, and other important areas.</p>
+    <p class="mb-5">However, this extension of one of our physical abilities also numbed other abilities and senses. For example, people are less likely to walk or bike and experience less of their surrounding. We notice here how the focus on convenience or efficiency in one or few aspects will always come with a trade-off. Pros and cons.</p>
+    
+    <h3 class="text-xl font-bold mb-2">3. Hot and cool media</h3>
+    <p class="mb-5">Podcasts and video games. Former is a hot medium requiring little to no involvement, while the other is a (very) cool medium requiring constant engagement from all senses. This way of assessing media can help understand how we behave and what kind of media one should consume at any given point. A cool medium that demands full attention and engagement could mean hours of consumption and high cognitive load, whereas a hot medium can be less stimulating and more relaxing.</p>
+    `
+};
+
+// Use the Article component and pass the defined props
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{articleData.title}</title>
+</head>
+<body>
+  <Article {...articleData} />
+</body>
+</html>

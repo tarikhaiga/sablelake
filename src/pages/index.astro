@@ -23,16 +23,16 @@ import Work from "../components/Work.astro";
   <Navbar />
   <Hero />
   <!-- <Hero /> -->
-  <CardWrapper title="Articles" viewAllLink="articles">
-    <Card title="Do You Consent to Noise?" description="Noise as undesired information and its impact on cognitive behavior." imageSrc="./noise.webp" link="noise-consent"/>
-    <Card title="Dialling Down and Reading on Paper" description="Discussing some personal habits and decisions that help in going offline." imageSrc="" link="dialing-down"/>
-    <Card title="Separate Devices" description="Multi-purpose technology impact on behavior and what we can do about it." imageSrc="" link="separate-devices"/>
-    <!-- <Card title="Resources for Living Offline" description="unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with" imageSrc="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" link="article"/> -->
+  <CardWrapper title="Articles" hideViewAll>
+    <Card title="Do You Consent to Noise?" description="Noise as undesired information and its impact on cognitive behavior." imageSrc="/noise.webp" link="noise-consent"/>
+    <Card title="Dialling Down and Reading on Paper" description="Discussing some personal habits and decisions that help in going offline." imageSrc="https://images.unsplash.com/photo-1659841135771-727afd559f49?q=80&w=2600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" link="dialing-down"/>
+    <Card title="Separate Devices" description="Multi-purpose technology impact on behavior and what we can do about it." imageSrc="https://images.unsplash.com/photo-1513611771808-7e8ab7f1dec6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" link="separate-devices"/>
+    <!-- <Card title="Resources for Living Offline" description="unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with" imageSrc="" link="article"/> -->
   </CardWrapper>
-  <CardWrapper title="Book Reviews">
-    <Card title="Digital Minimalism" description=" Cal Newport" imageSrc="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" link="digital-minimalism"/>
-    <Card title="Understanding Media" description="Marshall McLuhan" imageSrc="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" link="understanding-media"/>
-    <Card title="Shop Class as Soulcraft" description="Matthew Crawford" imageSrc="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" link="shop-class"/>
+  <CardWrapper title="Book Reviews" hideViewAll>
+    <Card title="Digital Minimalism" description="by Cal Newport" imageSrc="/digital-minimalism-cover.png" link="digital-minimalism"/>
+    <Card title="Understanding Media" description="by Marshall McLuhan" imageSrc="/understanding-media-cover.png" link="understanding-media"/>
+    <Card title="Shop Class as Soulcraft" description="by Matthew Crawford" imageSrc="/shopclass-cover.png" link="shop-class"/>
   </CardWrapper>
   <CardWrapper title="Activities">
     <SmallCard />
@@ -48,11 +48,11 @@ import Work from "../components/Work.astro";
     <SmallCard />
     <SmallCard />
   </CardWrapper>
-  <CardWrapper title="Offline Merchandise">
+  <!-- <CardWrapper title="Offline Merchandise">
     <ProductCard />
     <ProductCard />
     <ProductCard />
-  </CardWrapper>
+  </CardWrapper> -->
   <!-- <CardWrapper title="Social & Visuals" hideViewAll={true}>
     <Social />
     <Social />

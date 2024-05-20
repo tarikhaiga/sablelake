@@ -1,0 +1,44 @@
+---
+// Import the Article component
+import Article from '../components/article.astro';
+
+// Define the props for the Article component
+const articleData = {
+  title: "Shop Class as Soulcraft: An Inquiry into the Value of Work, Matthew Crawford (2009)",
+  imageUrl: "/shopclass-cover.png",
+  imageAlt: "Shop Class as Soulcraft book cover",
+  content: `
+    <p class="mb-5 mt-5">In <i>Shop Class as Soulcraft</i>, Matthew Crawford delves into the diminishing role of manual labor in modern society, arguing that working with our hands offers unique cognitive and physical engagement, unlocking insights beyond mere theoretical understanding. This "manual competence," as Crawford calls it, goes beyond carpentry or mechanics; it encompasses various practical skills that provide tangible outcomes and connect us directly to the physical world.</p>
+    
+    <p class="mb-5">Crawford highlights the disconnect many experience due to a lack of "seeing themselves or their work represented in the real world." He criticizes the emphasis on "knowledge work" and education geared towards the information economy, suggesting it often leads to unfulfilling work with limited autonomy. He counters this with the deep satisfaction derived from tangible work, where individuals witness the direct impact of their efforts, fostering responsibility and self-recognition. This shift in perspective challenges the contemporary focus on abstract intellectual achievement and underscores the importance of engaging with the physical world, as evidenced by Crawford's use of Aristotle's quote:</p>
+    
+    <p class="mb-5 ml-5"><i>“Lack of experience diminishes our power of taking a comprehensive view of the admitted facts. Hence those who dwell in intimate association with nature and its phenomena are more able to lay down principles such as to admit of a wide and coherent development; while those whom devotion to abstract discussions has rendered unobservant of facts are too ready to dogmatize on the basis of a few observations.”</i></p>
+    
+    <p class="mb-5">Furthermore, Crawford emphasizes "spiritedness," the pursuit of understanding based on first principles, contrasting it with the "opportunity cost" mindset that reduces all experiences to fungible units of time and potential earnings. This distinction highlights the depth of engagement and learning possible when we value the process over the end result, a principle often lost in the rush towards productivity. He also proposes that this "spiritedness" can act as a "cure for narcissism" by fostering humility and openness, as illustrated by this excerpt:</p>
+    
+    <p class="mb-5 ml-5"><i>"Fixing things may be a cure for narcissism... In a sense, then, a mathematical representation of the world renders the world as something of our own making... By contrast, in diagnosing and fixing things made by others... one is confronted with obscurities, and must remain constantly open to the signs by which they reveal themselves. This openness is incompatible with self-absorption; to maintain it we have to fight our tendency to get anchored in snap judgments. This is easier said than done."</i></p>
+    
+    <p class="mb-5">Building on this, Crawford suggests that intellectual and moral virtue are inherently intertwined. For example, a mechanic requires attentiveness and a sense of responsibility towards the object they are fixing (moral virtue) to become better at their craft (intellectual virtue). As Crawford states:</p>
+    
+    <p class="mb-5 ml-5"><i>"Contrary to the cognitive psychologists’ own view of the matter (or rather, outside the purview of their discipline as they conceive it), this cognitive capacity seems to be rooted in a moral capacity. It isn’t captured by the psychometrician’s IQ tests, nor by the reductive view of intelligence as mental 'processing power,' as though the data of experience were simply given to us, the way they are to a computer, ready for processing. In the real world, problems do not present themselves unambiguously. Piston slap may indeed sound like loose tappets, so to be a good mechanic you have to be constantly attentive to the possibility that you may be mistaken. This is an ethical virtue."</i></p>
+    
+    <p class="mb-5">According to Crawford, neglecting opportunities to exercise this ethical virtue leads to its atrophy, potentially leading to the "unintended moral re-education" of "degraded work":</p>
+    
+    <p class="mb-5 ml-5"><i>"If occasions for the exercise of judgment are diminished, the moral-cognitive virtue of attentiveness will atrophy. The institutionalized carelessness of Taylorized work, from the assembly line to the electronic sweatshop, would reform us all in the image of Pirsig’s idiot. We have to wonder, then, whether degraded work entails not just dumbing down but also a certain unintended moral re-education."</i></p>
+    
+    <p class="mb-5">In conclusion, the book encourages readers to reconsider the value of manual labor, advocating for a more balanced view of intellect that includes tacit knowledge and ethical virtues such as attentiveness and responsibility. Crawford's reflections provide support for exploring hands-on activities, trying to instill autonomy in one’s work, and embracing “slow thinking” that can create more time for tinkering, reflection, and being present with the physical world. In an era where AI and automation threaten to further disconnect us from the physical world, Crawford's call for manual competence and ethical virtue becomes even more urgent, underscoring the importance of maintaining a connection to tangible work and the richness it brings to our intellectual and moral lives.</p>
+  `
+};
+
+// Use the Article component and pass the defined props
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{articleData.title}</title>
+</head>
+<body>
+  <Article {...articleData} />
+</body>
+</html>
