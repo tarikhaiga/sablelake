@@ -1,13 +1,21 @@
+---
+const {title, description, hideDesc}= Astro.props
+---
+
+
+
 <a class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" href="#">
   <div class="p-4 md:p-5">
     <div class="flex justify-between items-center">
       <div>
         <h3 class="group-hover:text-blue-600 font-semibold">
-          Management
+          {title}
         </h3>
-        <p class="text-sm">
-          4 job positions
-        </p>
+        {!hideDesc && description && (
+          <p class="text-sm">
+            {description}
+          </p>
+        )}
       </div>
       <div class="pl-3">
         <svg class="w-3.5 h-3.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
