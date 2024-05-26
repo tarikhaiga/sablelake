@@ -1,8 +1,8 @@
 ---
-const {title, description, hideDesc, modalId}= Astro.props
+const {title, description, hideDesc, modalId, link}= Astro.props
 ---
 
-<a class="cursor-pointer group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" data-hs-overlay={`#${modalId}`}>
+<a href ={link} class="cursor-pointer group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" data-hs-overlay={`#${modalId}`}>
   <div class="p-4 md:p-5">
     <div class="flex justify-between items-center">
       <div>
