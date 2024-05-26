@@ -1,21 +1,15 @@
 ---
-const {title, description, hideDesc}= Astro.props
+const {title, description, hideDesc, modalId}= Astro.props
 ---
 
-
-
-<a class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" href="#">
+<a class="cursor-pointer group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" data-hs-overlay={`#${modalId}`}>
   <div class="p-4 md:p-5">
     <div class="flex justify-between items-center">
       <div>
         <h3 class="group-hover:text-blue-600 font-semibold">
           {title}
         </h3>
-        {!hideDesc && description && (
-          <p class="text-sm">
-            {description}
-          </p>
-        )}
+        {!hideDesc && description && (<p class="text-sm">{description}</p>)}
       </div>
       <div class="pl-3">
         <svg class="w-3.5 h-3.5" width="16" height="16" viewBox="0 0 16 16" fill="none">

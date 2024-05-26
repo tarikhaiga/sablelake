@@ -1,0 +1,10 @@
+<div id="hs-show-hide-collapse-heading" class="hs-collapse hidden w-full overflow-hidden transition-[height] duration-300 max-w-[85rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" aria-labelledby="hs-show-hide-collapse">
+    <slot />
+    </div>
+    <button type="button" class="hs-collapse-toggle inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none max-w-[85rem] mx-auto px-4 sm:px-6 md:px-8 lg:px-10" id="hs-show-hide-collapse" data-hs-collapse="#hs-show-hide-collapse-heading">
+        <span class="hs-collapse-open:hidden">View more</span>
+        <span class="hs-collapse-open:block hidden pt-8">Hide</span>
+        <svg class="hs-collapse-open:pt-8 flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6"></path>
+        </svg>
+    </button>

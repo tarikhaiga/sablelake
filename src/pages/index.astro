@@ -1,13 +1,98 @@
 ---
-import Navbar from "../components/Navbar.astro"
-import Footer from "../components/Footer.astro"
-import Hero from "../components/Hero.astro"
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
 import CardWrapper from "../components/CardWrapper.astro";
 import Card from "../components/Card.astro";
 import SmallCard from "../components/SmallCard.astro";
-import ProductCard from "../components/ProductCard.astro";
-import Social from "../components/Social.astro";
-import Work from "../components/Work.astro";
+import Collapse from "../components/Collapse.astro";
+import Modal from "../components/Modal.astro";
+
+// Define modal contents
+const modalContents = {
+  readingBooks: {
+    title: "Reading Books",
+    description: "Reading books promotes deep focus and immersion, as it encourages engaging with one content piece at a time, free from digital interruptions. This practice not only reduces screen time, alleviating eye strain and supporting better sleep, but also offers a tactile experience. The tactile experience of handling a book, feeling its weight, and turning its pages enriches the reading experience, making it more engaging and memorable.",
+  },
+  printingArticles: {
+    title: "Printing Webpages",
+    description: "Whether it is a Wikipedia article or a Twitter thread, you can try to print any long and interesting material online to digest it better offline. This can help in prioritizing what you want to read in addition to minimizing distractions.",
+  },
+  booksAroundApartmentModal: {
+    title: "Place books around your apartment",
+    description: "This activity serves as a visual reminder to engage with them, naturally reducing screen time and promoting a reading habit. This setup can create a more relaxing environment, encouraging spontaneous reading moments. It fosters an atmosphere of learning and curiosity, making it easier to disconnect from digital distractions and immerse in the tangible, enriching experience of reading."
+  },
+  exerciseModal: {
+    title: "Exercise",
+    description: "Regular exercise is a key component of living offline, offering a break from digital devices while boosting physical health and mental well-being. It encourages mindfulness and presence, allowing for a deeper connection with one's body and surroundings. Engaging in physical activity can also improve mood, increase energy levels, and promote better sleep, making it a holistic approach to enhancing quality of life away from screens.\n\n**Tip:** if you’re listening to music while exercising, try to not engage with your music player. Let songs play like you’re listening to a radio, you’ll enjoy them more!"
+  },
+  walkingModal: {
+    title: "Walking",
+    description: "Walking offers a simple, accessible way to disconnect from digital devices and reconnect with the physical world. It promotes mindfulness, allowing one to appreciate the nuances of their environment, stimulates creativity, and reduces stress. Regular walks can enhance physical health while providing valuable time for reflection, making it a fundamental offline activity that benefits both mind and body.\n\n**Tip**: if you’re walking with someone else, designate one person to carry a phone for emergency but keep it on silent mode."
+  },
+  repairModal: {
+    title: "Repair or improve something",
+    description: "In addition to offering a tangible sense of accomplishment and enhances your living space, this hands-on activity diverts attention from digital screens, fostering creativity and problem-solving skills. It also encourages reflection and patience, as you focus on the task at hand, providing a fulfilling offline experience that can improve both your environment and your well-being."
+  },
+  cookingModal: {
+    title: "Cooking",
+    description: "Cooking is a creative outlet that encourages living offline by engaging the senses and focusing on the present moment. It promotes healthier eating habits, offers a break from digital screens, and provides the satisfaction of creating meals from scratch, fostering a deeper appreciation for food and its preparation."
+  },
+  eatOutModal: {
+    title: "Eat out",
+    description: "If you do not feel like cooking, then eating out can offer a break from routine, allowing you to enjoy diverse cuisines and cultures without digital distractions. It encourages social interactions and can enhance relationships through shared dining experiences. This activity also supports local businesses and can provide inspiration for your own cooking, broadening your culinary horizons and appreciation for different flavors and cooking techniques.\n\n**Tip:** you can designate a day for eating out every week, and of course phones on silent mode!"
+  },
+  shoppingModal: {
+    title: "Shopping",
+    description: "Going shopping (in person) allows for a physical and interactive experience, enabling you to physically inspect and compare products. This hands-on approach can improve decision-making and satisfaction with purchases. You could also potentially discovering unique items not available online, or items you need but have not even thought about!\n\n**Tip:** Have a list of items you’d like to buy that’s easily accessible whenever you find yourself going out."
+  },
+  studyModal: {
+    title: "Study",
+    description: "Think about the any topic at school that you find interesting. If you're motivated and enjoy exploring new subjects, consider dedicating yourself to mastering a new skill or topic with the same intensity you applied to school exams. This endeavor not only deepens your understanding but also equips you with practical applications of your newfound knowledge, enriching both your personal and professional life.\n\n**Tip:** Find yourself a second hand bookstore where price will not be an issue, allowing you to explore different topics at ease. Money spent on books is like money spent on food – totally worth it!"
+  },
+  meditationModal: {
+    title: "Meditation",
+    description: "Meditation cultivates a space for slowness, calm, and reflection, offering a peaceful retreat from the fast-paced digital world. This practice encourages restful moments, allowing individuals to connect deeply with themselves and their surroundings. Through this intentional slowing down, one can find rest, gain perspective, and nurture a serene state of mind, making meditation a viable way for a reflective and restorative offline lifestyle."
+  },
+  familyFriendsModal: {
+    title: "Meeting or talking to family and friends",
+    description: "Meeting or talking to family and friends offline strengthens bonds, fosters genuine connections, and enhances emotional well-being. These interactions allow for meaningful conversations and shared experiences, building memories and support networks that enrich life beyond the digital world. Engaging in face-to-face communication also improves empathy, understanding, and the quality of relationships.\n\n**Tip:** when in-person interaction is impossible, a phone call is better than text messages."
+  },
+  planningDayModal: {
+    title: "Planning a day with few offline activities",
+    description: "Planning a day with a few offline activities simplifies decision-making, as it removes the need to constantly think about what to do next. This structured approach ensures dedicated time to unplug and disconnect from digital devices, promoting a more mindful and engaged way of living.\n\nFor example, Sunday can be a day that includes few offline activities such as exercising, reading (print) books, cooking or meeting people."
+  },
+  writingModal: {
+    title: "Writing",
+    description: "Any form of writing can be a great offline exercise, whether it's reflecting on a specific moment, engaging in daily journaling, or pursuing creative writing. This activity combines multiple benefits: it fosters creative expression, encourages introspection, promotes clear thinking, and develops communication skills."
+  },
+  museumModal: {
+    title: "Visit a museum",
+    description: "Museums offer visitors a glimpse into different worlds. With various exhibitions and galleries, visitors can always find something interesting to learn about by simply walking around. Many museums are housed in beautifully designed buildings or environment, which can be a compelling reason to visit on their own."
+  },
+  parkModal: {
+    title: "Visit a park",
+    description: "Visiting any park, from grand national parks to modest urban squares, taps into our inherent affinity for nature, offering a serene escape that naturally invites relaxation and a joyful disconnection from the digital world."
+  },
+  coffeeShopModal: {
+    title: "Sit in a coffee shop without using any devices",
+    description: "When was the last time you did this?\n\nToday, one can rarely enter a coffee shop without seeing someone with their computer. Without digital devices, one could read, write, meet people, or simply observe what is going on around them, allowing the brain and the body to fully experience a place that is different than the home."
+  },
+  drivingModal: {
+    title: "Driving",
+    description: "Much like meditation, undistracted driving is one of the few activities left in modern time demands focus on a single task. It provides the chance to disconnect from the digital world while requiring attention to the surrounding environment. Of course, traveling and the sense of independence are other reasons to go for a drive."
+  },
+  photographyModal: {
+    title: "Photography",
+    description: "When taken up as a deliberate activity, photography enables individuals to concentrate on either the process of taking photos or the photography subject itself, heightening awareness of their environment and serving as a documentary record of a moment in time. Additionally, the superior quality and control offered by a standard camera, as opposed to a smartphone camera, enhance the photographic experience."
+  },
+  drawingModal: {
+    title: "Drawing / Painting",
+    description: "Few activities sharpen attention to detail like drawing, which enhances our experience by refining our visual discernment between appealing and unattractive sights. This practice not only hones observational skills in our visually saturated world but also serves as a relaxing exercise. \n\nAdditionally, the outputs of drawing can ignite conversations with family and friends, enriching social interactions with discussions about creativity and personal expression, thereby adding a meaningful dimension to our offline lives through both its process and its results."
+  }
+  
+};
+
 ---
 
 <!DOCTYPE html>
@@ -18,6 +103,17 @@ import Work from "../components/Work.astro";
   <title>Sable Lake</title>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="./lake-photo.jpg">
+  <style>
+    /* Hide scrollbars but allow scrolling */
+      html, body {
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+        scrollbar-width: none; /* Firefox */
+      }
+      html::-webkit-scrollbar, body::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+      }
+  </style>
 </head>
 <body class="bg-gray-200">
   <Navbar />
@@ -34,28 +130,52 @@ import Work from "../components/Work.astro";
     <Card title="Understanding Media" description="by Marshall McLuhan" imageSrc="/understanding-media-cover.png" link="understanding-media"/>
     <Card title="Shop Class as Soulcraft" description="by Matthew Crawford" imageSrc="/shopclass-cover.png" link="shop-class"/>
   </CardWrapper>
-  <CardWrapper title="Activities">
-    <SmallCard title="Reading books"/>
-    <SmallCard title="Printing online articles or webpages" />
-    <SmallCard title="Place books around your apartment" />
-    <SmallCard title="Exercise" />
-    <SmallCard title="Walking" />
-    <SmallCard title="Repair or improve something" />
-    <SmallCard title="Cooking" />
-    <SmallCard title="Eat out" />
-    <SmallCard title="Shopping" />
-    <SmallCard title="Study" />
-    <SmallCard title="Meditation" />
-    <SmallCard title="Meeting or talking to fmaily and friends" />
-    <SmallCard title="Planning a day with few offline activities" />
-    <SmallCard title="Writing" />
-    <SmallCard title="Visit a museum" />
-    <SmallCard title="Visit a part" />
-    <SmallCard title="Sit in a coffeeshop without any devices" />
-    <SmallCard title="Driving" />
-    <SmallCard title="Photography" />
-    <SmallCard title="Drawing" />
+  <CardWrapper title="Activities" hideViewAll>
+    <SmallCard title="Reading books" modalId="readingBooks" />
+    <SmallCard title="Printing webpages" modalId="printingArticles" />
+    <SmallCard title="Place books around your apartment" modalId="booksAroundApartmentModal" />
+    <SmallCard title="Exercise" modalId="exerciseModal"  />
+    <SmallCard title="Walking" modalId="walkingModal" />
+    <SmallCard title="Repair or improve something" modalId="repairModal" />
+    <SmallCard title="Cooking" modalId="cookingModal" />
+    <SmallCard title="Eat out" modalId="eatOutModal" />
+    <SmallCard title="Shopping" modalId="shoppingModal" />
   </CardWrapper>
+  <Collapse>
+    <SmallCard title="Study" modalId="studyModal" />
+    <SmallCard title="Meditation" modalId="meditationModal" />
+    <SmallCard title="Talking to family and friends" modalId="familyFriendsModal" />
+    <SmallCard title="Planning a day with few offline activities" modalId="planningDayModal" />
+    <SmallCard title="Writing" modalId="writingModal" />
+    <SmallCard title="Visit a museum" modalId="museumModal" />
+    <SmallCard title="Visit a park" modalId="parkModal" />
+    <SmallCard title="Sit in a coffeeshop without any devices" modalId="coffeeShopModal" />
+    <SmallCard title="Driving" modalId="drivingModal" />
+    <SmallCard title="Photography" modalId="photographyModal" />
+    <SmallCard title="Drawing" modalId="drawingModal" />
+  </Collapse>
+  <!-- Include modals for SmallCards -->
+  <Modal id="readingBooks" title={modalContents.readingBooks.title} description={modalContents.readingBooks.description} />
+  <Modal id="printingArticles" title={modalContents.printingArticles.title} description={modalContents.printingArticles.description} />
+  <Modal id="booksAroundApartmentModal" title={modalContents.booksAroundApartmentModal.title} description={modalContents.booksAroundApartmentModal.description} />
+  <Modal id="exerciseModal" title={modalContents.exerciseModal.title} description={modalContents.exerciseModal.description} />
+  <Modal id="walkingModal" title={modalContents.walkingModal.title} description={modalContents.walkingModal.description} />
+  <Modal id="repairModal" title={modalContents.repairModal.title} description={modalContents.repairModal.description} />
+  <Modal id="cookingModal" title={modalContents.cookingModal.title} description={modalContents.cookingModal.description} />
+  <Modal id="eatOutModal" title={modalContents.eatOutModal.title} description={modalContents.eatOutModal.description} />
+  <Modal id="shoppingModal" title={modalContents.shoppingModal.title} description={modalContents.shoppingModal.description} />
+  <Modal id="studyModal" title={modalContents.studyModal.title} description={modalContents.studyModal.description} />
+  <Modal id="meditationModal" title={modalContents.meditationModal.title} description={modalContents.meditationModal.description} />
+  <Modal id="familyFriendsModal" title={modalContents.familyFriendsModal.title} description={modalContents.familyFriendsModal.description} />
+  <Modal id="planningDayModal" title={modalContents.planningDayModal.title} description={modalContents.planningDayModal.description} />
+  <Modal id="writingModal" title={modalContents.writingModal.title} description={modalContents.writingModal.description} />
+  <Modal id="museumModal" title={modalContents.museumModal.title} description={modalContents.museumModal.description} />
+  <Modal id="parkModal" title={modalContents.parkModal.title} description={modalContents.parkModal.description} />
+  <Modal id="coffeeShopModal" title={modalContents.coffeeShopModal.title} description={modalContents.coffeeShopModal.description} />
+  <Modal id="drivingModal" title={modalContents.drivingModal.title} description={modalContents.drivingModal.description} />
+  <Modal id="photographyModal" title={modalContents.photographyModal.title} description={modalContents.photographyModal.description} />
+  <Modal id="drawingModal" title={modalContents.drawingModal.title} description={modalContents.drawingModal.description} />
+
   <CardWrapper title="Communities & Movements" hideViewAll >
     <SmallCard title="r/nosurf" description="sample desc here and adding more text just to test how this thing wraps to next line because i will use it"/>
     <SmallCard title="r/digitalminimalism" description=" "/>
@@ -75,5 +195,6 @@ import Work from "../components/Work.astro";
   </CardWrapper> -->
   <Footer />
   <script src="../../node_modules/preline/dist/preline.js"></script>
+  
 </body>
 </html>
