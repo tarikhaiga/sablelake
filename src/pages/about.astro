@@ -1,0 +1,37 @@
+---
+// Import the Article component
+import Article from '../components/article.astro';
+
+// Define the props for the Article component
+const articleData = {
+  title: "About Sable Lake",
+  subtitle: "",
+  imageUrl: "",
+  imageAlt: "",
+  content: `
+    <p class="mb-5">This is a project that aims to improve help people enhance their offline life and spend less time on their digital devices. We recognize the benefits of digital technology and its capabilities, that is why we are not seeking an alternative but a complement.
+    Everyone should be information conscious and maintain a healthy information diet. As a result, we are designing "offline products", writing articles, discussing research and compiling a repository of information on how to enhance your offline life.</p>
+    <h3 class="text-2xl font-semibold mb-2"> How can you use Sable Lake </h3>
+    <ol class="mb-5">
+        <li>1. Read our articles and book reviews on this topic </li>
+        <li>2. Try out our print products that promote spending time offline (launching soon).</li>
+        <li>3. Explore few of the paper products we offer today at <a href="https://www.papurrr.com" class="underline-offset-1 underline text-blue-600">Papurrr</a>. </li>
+        <li> 4. <a href="https://sablelake.substack.com/" class="underline-offset-1 underline text-blue-600">Subcribe to our Substack</a> to recieve updates on what we do. </li>
+    </ol>
+    <p class="mb-5"> To read more about our near-term plans, have a look at the article we wrote here:</p>
+    <a href="https://sablelake.substack.com/p/plan-for-sable-lake" target="_blank"><img src="/sstack-plans.jpg" width=250px/></a>
+  `
+};
+
+// Use the Article component and pass the defined props
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{articleData.title}</title>
+</head>
+<body>
+  <Article {...articleData} />
+</body>
+</html>
