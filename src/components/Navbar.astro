@@ -1,7 +1,10 @@
 <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm lg:px-10 mb-8">
-  <nav class="mt-6 relative max-w-7xl w-full bg-gray-200 border-b border-gray-400 mx-2 py-3 md:flex md:items-center md:justify-between md:py-0 md:px-4 xl:mx-auto" aria-label="Global">
+  <nav class="mt-6 relative max-w-7xl w-full border-b border-hunter-green-500 py-3 mx-4 lg:mx-0 md:flex md:items-center md:justify-between md:py-0 xl:mx-auto xl:px-0" aria-label="Global">
     <div class="flex items-center justify-between">
-      <a class="flex-none text-xl font-semibold " href="https://sablelake.com" aria-label="Brand">Sable Lake</a>
+      <a class="flex flex-row items-center whitespace-nowrap gap-2 text-2xl font-clashdisplay text-hunter-green-50 " href="https://sablelake.com" aria-label="Brand">
+        <img src="/slsymbol.svg" alt="Symbol" class="w-6 h-6">
+        Sable Lake
+      </a>
       <div class="md:hidden">
         <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-full border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm " data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
           <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -15,59 +18,17 @@
     </div>
     <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block">
       <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-        <a class="font-medium text-gray-500 hover:text-blue-600 md:py-6 " href="https://sablelake.com" aria-current="page">Home</a>
-        <a class="font-medium text-gray-500 hover:text-blue-600 md:py-6" href="https://sablelake.substack.com/" target="_blank">Subscribe</a>
-        <a class="font-medium text-gray-500 hover:text-blue-600 md:py-6 " href="about">About</a>
-        <!-- <a class="font-medium text-gray-500 hover:text-gray-400 md:py-6 " href="#">Blog</a> -->
-
-        <!-- <div class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] md:[--trigger:hover] md:py-4">
-          <button type="button" class="flex items-center w-full text-gray-500 hover:text-gray-400 font-medium  ">
-            Dropdown
-            <svg class="ml-2 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            </svg>
-          </button>
-
-          <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-white md:shadow-md rounded-lg p-2 before:absolute top-full md:border before:-top-5 before:left-0 before:w-full before:h-5">
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 href="#">
-              About
-            </a>
-            <div class="hs-dropdown relative [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
-              <button type="button" class="w-full flex justify-between items-center text-sm text-gray-800 rounded-md py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500">
-                Sub Menu
-                <svg class="md:-rotate-90 ml-2 w-2.5 h-2.5 text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                </svg>
-              </button>
-
-              <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 md:mt-2 bg-white md:shadow-md rounded-lg p-2 before:absolute md:border before:-right-5 before:top-0 before:h-full before:w-5 top-0 right-full !mx-[10px]">
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 href="#">
-                  About
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 href="#">
-                  Downloads
-                </a>
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 href="#">
-                  Team Account
-                </a>
-              </div>
-            </div>
-
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 href="#">
-              Downloads
-            </a>
-            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 href="#">
-              Team Account
-            </a>
-          </div>
-        </div> -->
-
-        <a class="flex items-center gap-x-2 font-medium text-gray-700 hover:text-blue-600 md:border-l md:border-gray-400 md:my-6 md:pl-6" href="https://www.papurrr.com/" target="_blank">
-          <svg  width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.8739 8.25H2.7489V4.8125H1.3739V10.3125C1.3739 10.6928 1.68113 11 2.0614 11H7.5614C7.94167 11 8.2489 10.6928 8.2489 10.3125V4.8125H6.8739V8.25ZM13.6329 3.05508L11.8003 0.305078C11.6714 0.113867 11.4565 0 11.2266 0H2.52117C2.29128 0 2.07644 0.113867 1.94968 0.305078L0.117064 3.05508C-0.188014 3.5127 0.138549 4.125 0.688549 4.125H13.0614C13.6093 4.125 13.9358 3.5127 13.6329 3.05508ZM10.9989 10.6562C10.9989 10.8453 11.1536 11 11.3426 11H12.0301C12.2192 11 12.3739 10.8453 12.3739 10.6562V4.8125H10.9989V10.6562Z" fill="rgb(55 65 81)"/>
-            </svg>            
-          Shop
+        <a class="font-epilogue text-hunter-green-300 hover:text-hunter-green-50 md:py-6 " href="https://sablelake.com" aria-current="page">Home</a>
+        <a class="font-epilogue text-hunter-green-300 hover:text-hunter-green-50 md:py-6" href="https://sablelake.substack.com/" target="_blank">Subscribe</a>
+        <a class="font-epilogue text-hunter-green-300 hover:text-hunter-green-50 md:py-6 " href="about">About</a>
+       
+        <a class="flex items-center gap-x-2 font-medium hover:text-hunter-green-50 md:border-l md:border-hunter-green-500 md:my-6 md:pl-6" href="https://www.papurrr.com/" target="_blank">
+            <button type="button" class="py-3 px-4 inline-flex justify-center items-center gap-x-2 min-w-[120px] text-sm font-epilogue border border-transparent bg-hunter-green-50 text-hunter-green-700 hover:bg-gray-200">
+              <img src="/shop.svg" alt="shopicon" class="w-4 h-4 fill-current text-hunter-green-700 mb-[2px]"> 
+              Shop
+            </button>
         </a>
+
       </div>
     </div>
   </nav>

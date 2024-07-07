@@ -101,7 +101,9 @@ const modalContents = {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sable Lake</title>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="./lake-photo.jpg">
   <style>
     /* Hide scrollbars but allow scrolling */
@@ -113,9 +115,18 @@ const modalContents = {
       html::-webkit-scrollbar, body::-webkit-scrollbar {
         display: none; /* Safari and Chrome */
       }
+      @font-face {
+        font-family: 'ClashDisplay-Variable';
+        src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+            url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
+        font-weight: 200 700;
+        font-display: swap;
+        font-style: normal;
+      }
   </style>
 </head>
-<body class="bg-gray-200">
+<body class="bg-hunter-green-900">
   <Navbar />
   <Hero />
   <!-- <Hero /> -->
@@ -194,5 +205,6 @@ const modalContents = {
   </CardWrapper> -->
   <Footer />
   <script src="../../node_modules/preline/dist/preline.js"></script>
+  <a class="font-epilogue font-medium text-hunter-green-300 hover:text-hunter-green-50 md:py-6" href="https://sablelake.com" aria-current="page">gHome</a>
 </body>
 </html>
