@@ -10,10 +10,10 @@ const { title, description, hideDesc, modalId, href } = Astro.props;
   <div class="p-4 md:p-5">
     <div class="flex justify-between items-center">
       <div>
-        <h3 class="group-hover:text-blue-600 font-semibold">
+        <h3 class= "font-epilogue font-medium text-hunter-green-700">
           {title}
         </h3>
-        {!hideDesc && description && (<p class="text-sm mt-2 text-gray-500">{description}</p>)}
+        {!hideDesc && description && (<p class="font-epilogue text-sm mt-2 text-hunter-green-700">{description}</p>)}
       </div>
       <div class="pl-3">
         {href ? (

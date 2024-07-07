@@ -3,7 +3,7 @@ const {title, hideViewAll, viewAllLink}= Astro.props
 ---
 <section class="max-w-[85rem] mx-auto py-8 px-4 sm:px-6 md:px-8 lg:px-10">
   <div class="w-full flex justify-between mb-4">
-    <h2 class="text-3xl">{title}</h2>
+    <h2 class="font-epilogue text-3xl text-hunter-green-300">{title}</h2>
     {!hideViewAll && <a href={viewAllLink}>View all</a>}
   </div>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
